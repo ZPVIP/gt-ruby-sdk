@@ -1,7 +1,13 @@
 # Geetest ruby sdk
 
 
-Geetest是一个很不错的验证码组件，使用方便，安全性强。可惜没有ruby的sdk。于是顺手写了一个，由于实在太简单，所以没有做成gem，只留下实现和demo自取。
+Geetest是一个很不错的验证码组件，使用方便，安全性强。
+
+## 准备工作
+
+由于 Geetest 2016 年 2 月升级了系统，他们需要针对 Id 和 key 人工修改某些参数后才能支持 Ruby 调用，所以使用前请联系客服。
+
+修改成功后 `http://api.geetest.com/get.php?gt=你的ID` 才不会返回 404。
 
 ## 安装
 
@@ -58,17 +64,6 @@ bundle
 ruby app.rb
 access localhost:4567 via your browser
 ```
-
-## 如何在rails项目中使用geetest
-
-将geetest_ruby_sdk.rb拷贝至lib目录
-
-```html
-在view页面加上
-<script type="text/javascript" src="http://api.geetest.com/get.php?gt=app_id"></script>
-```
-
-其中id为geetest的公钥，这是要注册后才能得到的
 
 ## 在sinatra项目中使用geetest
 
